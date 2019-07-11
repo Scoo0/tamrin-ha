@@ -1,0 +1,23 @@
+text = """from nltk.tokenize import sent_tokenize, word_tokenize # $ pip install nltk
+
+sentences = sent_tokenize(paragraph)
+word_count = lambda sentence: len(word_tokenize(sentence))
+print(min(sentences, key=word_count)) # the shortest sentence by word count
+print(max(sentences, key=word_count)) # the longest sentence by word count"""
+
+text = text.replace(".", " ")
+text = text.replace("#", " ")
+text = text.replace("=", " ")
+text = text.replace("(", " ")
+text = text.replace(")", " ")
+text = text.replace("_", " ")
+text = text.replace("$", " ")
+text = text.replace(",", " ")
+# print(text)
+words = text.__len__()
+words2 = text.count("by")  # shomordne tedade kalamei
+print(words2)
+print(words)
+new_text = text.split()  # tabdil be list
+new2_text = set(new_text)  # tabdil be set
+print(new2_text.__len__())  # tedad jomleha bedone tekrar
